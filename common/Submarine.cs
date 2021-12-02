@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace advent2021.common
 {
@@ -10,6 +11,23 @@ namespace advent2021.common
         public override string ToString()
         {
             return $"{nameof(Direction)}: {Direction}, {nameof(Units)}: {Units}";
+        }
+        
+        public static SubmarineCommand ParseCommand(string line)
+        {
+            var dirStr = line.Split(" ").First();
+            var direction = dirStr switch
+            {
+                "forward" => Enums.Direction.Forward,
+                "up" => Enums.Direction.Up,
+                "down" => Enums.Direction.Down,
+                _ => throw new ArgumentException()
+            };
+            return new SubmarineCommand
+            {
+                Direction = direction,
+                Units = int.Parse(line.Split(" ").Last())
+            };
         }
     }
 
