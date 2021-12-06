@@ -20,6 +20,7 @@ ISolution SelectSolution(string arg)
         "3" => new Day03(),
         "4" => new Day04(),
         "5" => new Day05(),
+        "6" => new Day06(),
         _ => throw new ArgumentException("No solution")
     };
 }
