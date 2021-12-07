@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using advent2021.utils;
+#pragma warning disable 8618
 
 namespace advent2021.solutions
 {

@@ -1,13 +1,22 @@
 ﻿using System;
+using System.Diagnostics;
 using advent2021.solutions;
 
 ISolution solution = SelectSolution(args[0]);
 
-Console.WriteLine("Part 1");
-solution.Part1();
+var stopWatch = new Stopwatch();
 
-Console.WriteLine("Part 2");
+Console.WriteLine("Part 1");
+stopWatch.Start();
+solution.Part1();
+stopWatch.Stop();
+Console.WriteLine($"{stopWatch.ElapsedMilliseconds} ms");
+
+Console.WriteLine("\nPart 2");
+stopWatch.Start();
 solution.Part2();
+stopWatch.Stop();
+Console.WriteLine($"{stopWatch.ElapsedMilliseconds} ms");
 
 return 1;
 
