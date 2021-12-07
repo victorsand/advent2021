@@ -11,6 +11,7 @@ stopWatch.Start();
 solution.Part1();
 stopWatch.Stop();
 Console.WriteLine($"{stopWatch.ElapsedMilliseconds} ms");
+stopWatch.Reset();
 
 Console.WriteLine("\nPart 2");
 stopWatch.Start();
